@@ -2,7 +2,7 @@ import torch, time
 import torch.optim as optim
 import torch.nn as nn
 from dataset import get_cifar10
-from model import LeNet5, VGGLike, ResNet18
+from model import LeNet5, VGG16, ResNet18
 from utils import plot_metrics
 
 def train_model(model, trainloader, testloader, epochs=5, lr=0.001):
@@ -46,7 +46,7 @@ def train_model(model, trainloader, testloader, epochs=5, lr=0.001):
 
 if __name__=="__main__":
     trainloader,testloader = get_cifar10()
-    models = {"LeNet5":LeNet5(),"VGGLike":VGGLike(),"ResNet18":ResNet18()}
+    models = {"LeNet5":LeNet5(),"VGGLike":VGG16(),"ResNet18":ResNet18()}
     results={}
     for name,model in models.items():
         print(f"Training {name}...")
