@@ -1,0 +1,7 @@
+{
+  "models": ["LeNet5", "VGGLike", "ResNet18"],
+  "epochs": 5,
+  "batch_size": 64,
+  "learning_rate": 0.001,
+  "dataset": "CIFAR10"
+}
